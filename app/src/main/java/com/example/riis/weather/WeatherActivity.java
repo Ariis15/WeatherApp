@@ -4,25 +4,12 @@ package com.example.riis.weather;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
-import java.text.DateFormat;
-import java.util.Date;
-import java.util.Locale;
-
-import org.json.JSONObject;
-
-import android.graphics.Typeface;
 import android.os.Bundle;
-import android.os.Handler;
 import android.text.InputType;
-import android.util.Log;
-import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
-
 public class WeatherActivity extends AppCompatActivity {
 
     @Override
@@ -35,6 +22,14 @@ public class WeatherActivity extends AppCompatActivity {
                     .add(R.id.container, new WeatherFragment())
                     .commit();
         }
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return true;
     }
 
 
